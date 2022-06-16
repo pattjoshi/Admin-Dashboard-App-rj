@@ -32,6 +32,7 @@ export const ContextProvider = ({ children }) => {
 
   return (
     // eslint-disable-next-line react/jsx-no-constructed-context-values
+    // those i pass in side StateContext it pass entair application
     <StateContext.Provider
       value={{
         currentColor,
@@ -58,30 +59,6 @@ export const ContextProvider = ({ children }) => {
 };
 
 export const useStateContext = () => useContext(StateContext);
-
-// import React, { createContext, useContext, useState } from "react";
-
-// const StateContextf = createContext();
-
-// const initialState = {
-//   // Default false
-//   chat: false,
-//   cart: false,
-//   userProfile: false,
-//   notification: false,
-// };
-
-// export const ContextProvider = ({ children }) => {
-//   const [themeSettings, setThemeSettings] = useState(false);
-//   const [activeMenu, setActiveMenu] = useState(true);
-//   return (
-//     <StateContext.Provider value={{ activeMenu }}>
-//       {children}
-//     </StateContext.Provider>
-//   );
-// };
-
-// export const useStateContext = () => useContext(StateContext);
 
 // How to return
 // give me the data from useStatecontext by useing useContext by specifi (stateContext)
