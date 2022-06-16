@@ -39,7 +39,7 @@ const Navbar = () => {
 
     return () => window.removeEventListener('resize', handleResize);
   }, []);
-
+// IN small divice side bar is not open
   useEffect(() => {
     if (screenSize <= 900) {
       setActiveMenu(false);
@@ -63,6 +63,7 @@ const Navbar = () => {
             className="flex items-center gap-2 cursor-pointer p-1 hover:bg-light-gray rounded-lg"
             onClick={() => handleClick('userProfile')}
           >
+            
             <img
               className="w-10 h-10 rounded-full"
               src={avatar}
@@ -71,7 +72,7 @@ const Navbar = () => {
             <p>
               <span className="text-gray-400 text-14">Hi,</span>{' '}
               <span className="text-gray-400 font-bold ml-1 text-14">
-                Om 
+                Om prakash parrjoshi
               </span>
             </p>
             <MdKeyboardArrowDown className="text-gray-400 text-14" />
@@ -88,3 +89,7 @@ const Navbar = () => {
 };
 
 export default Navbar;
+
+
+
+
